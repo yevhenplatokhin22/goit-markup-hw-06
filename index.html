@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,9 +18,9 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header">
+      <div class="container container-header">
         <nav class="navigation">
-          <a class="logo" href="./index.html"
+          <a class="logo header-logo" href="./index.html"
             >Web<span class="studio">Studio</span></a
           >
           <ul class="navigation-menu">
@@ -49,6 +49,82 @@
             </li>
           </ul>
         </address>
+        <button class="header-button" type="button">
+          <svg class="hero-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-heroicons"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu">
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-close">
+            <svg class="modal-svg" width="8" height="8">
+              <use href="./images/icons.svg#icon-btn-close"></use>
+            </svg>
+          </button>
+          <nav class="mobile-navigation">
+            <ul class="mobile-navigation-menu">
+              <li>
+                <a class="mobile-navigation-menu-first" href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li>
+                <a class="mobile-navigation-menu-f" href="">Portfolio</a>
+              </li>
+              <li>
+                <a class="mobile-navigation-menu-f" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="mobile-navigation-address">
+            <ul class="mobile-navigation-address">
+              <li class="mobile-navigation-address-items">
+                <a
+                  class="mobile-navigation-address-f"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="mobile-navigation-adress-items">
+                <a class="mobile-navigation-address-f" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-item-ul">
+              <li class="mobile-item-svg">
+                <a href="" class="mobile-item-a">
+                  <svg class="mobile-svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-item-svg">
+                <a href="" class="mobile-item-a">
+                  <svg class="mobile-svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-item-svg">
+                <a href="" class="mobile-item-a">
+                  <svg class="mobile-svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-item-svg">
+                <a href="" class="mobile-item-a">
+                  <svg class="mobile-svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
     </header>
 
@@ -121,12 +197,34 @@
           <h2 class="third-title">Our Team</h2>
           <ul class="third-item">
             <li class="third-card">
-              <img
-                src="./images/img(1).jpg"
-                alt="man1"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/img(1).jpg          1x,
+                    ./images/img(1)desktopx2.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <source
+                  srcset="
+                    ./images/img(1)tablet.jpg   1x,
+                    ./images/img(1)tabletx2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                ./images/img(1)mobile.jpg 1x,
+                ./images/img (1)mobile2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/img(1).jpg"
+                  alt="man1"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="third-name">
                 <h3 class="third-sub-title">Mark Guerrero</h3>
                 <p class="third-text">Product Designer</p>
@@ -163,12 +261,34 @@
               </div>
             </li>
             <li class="third-card">
-              <img
-                src="./images/img(2).jpg"
-                alt="man2"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/img(2).jpg          1x,
+                    ./images/img(2)desktopx2.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <source
+                  srcset="
+                    ./images/img(2)tablet.jpg   1x,
+                    ./images/img(2)tabletx2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                ./images/img(2)mobile.jpg 1x,
+                ./images/img (2)mobile2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/img(2).jpg"
+                  alt="man2"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="third-name">
                 <h3 class="third-sub-title">Tom Ford</h3>
                 <p class="third-text">Frontend Developer</p>
@@ -205,12 +325,34 @@
               </div>
             </li>
             <li class="third-card">
-              <img
-                src="./images/img(3).jpg"
-                alt="women"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/img(3).jpg          1x,
+                    ./images/img(3)desktopx2.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <source
+                  srcset="
+                    ./images/img(3)tablet.jpg   1x,
+                    ./images/img(3)tabletx2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                ./images/img(3)mobile.jpg 1x,
+                ./images/img (3)mobile2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/img(3).jpg"
+                  alt="women"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="third-name">
                 <h3 class="third-sub-title">Camila Garcia</h3>
                 <p class="third-text">Marketing</p>
@@ -247,12 +389,34 @@
               </div>
             </li>
             <li class="third-card">
-              <img
-                src="./images/img(4).jpg"
-                alt="man3"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/img(4).jpg          1x,
+                    ./images/img(4)desktopx2.jpg 2x
+                  "
+                  media="(min-width: 1158px)"
+                />
+                <source
+                  srcset="
+                    ./images/img(4)tablet.jpg   1x,
+                    ./images/img(4)tabletx2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                ./images/img(4)mobile.jpg 1x,
+                ./images/img (4)mobile2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/img(4).jpg"
+                  alt="man3"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="third-name">
                 <h3 class="third-sub-title">Daniel Wilson</h3>
                 <p class="third-text">UI Designer</p>
@@ -298,13 +462,35 @@
           <ul class="fourth-item">
             <li class="fourth-card">
               <div class="fourth-card-img">
-                <img
-                  class="images"
-                  src="./images/img5.jpg"
-                  alt="Додаток банку"
-                  width="360"
-                  height="300"
-                />
+                <picture class="images">
+                  <source
+                    srcset="
+                      ./images/img5.jpg            1x,
+                      ./images/img(5)desktopx2.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img(5)tablet.jpg   1x,
+                      ./images/img(5)tabletx2.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                  ./images/img(5)mobile.jpg 1x,
+                  ./images/img (5)mobile2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="images"
+                    src="./images/img5.jpg"
+                    alt="Додаток банку"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="fourth-card-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -318,13 +504,35 @@
             </li>
             <li class="fourth-card">
               <div class="fourth-card-img">
-                <img
-                  class="images"
-                  src="./images/img6.jpg"
-                  alt="Оплата QR-кодом"
-                  width="360"
-                  height="300"
-                />
+                <picture class="images">
+                  <source
+                    srcset="
+                      ./images/img6.jpg            1x,
+                      ./images/img(6)desktopx2.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img(6)tablet.jpg   1x,
+                      ./images/img(6)tabletx2.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                  ./images/img(6)mobile.jpg 1x,
+                  ./images/img (6)mobile2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="images"
+                    src="./images/img6.jpg"
+                    alt="Оплата QR-кодом"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="fourth-card-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -338,13 +546,35 @@
             </li>
             <li class="fourth-card">
               <div class="fourth-card-img">
-                <img
-                  class="images"
-                  src="./images/img7.jpg"
-                  alt="Додаток для медитації"
-                  width="360"
-                  height="300"
-                />
+                <picture class="images">
+                  <source
+                    srcset="
+                      ./images/img7.jpg            1x,
+                      ./images/img(7)desktopx2.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img(7)tablet.jpg   1x,
+                      ./images/img(7)tabletx2.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                  ./images/img(7)mobile.jpg 1x,
+                  ./images/img (7)mobile2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="images"
+                    src="./images/img7.jpg"
+                    alt="Додаток для медитації"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="fourth-card-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -358,13 +588,35 @@
             </li>
             <li class="fourth-card">
               <div class="fourth-card-img">
-                <img
-                  class="images"
-                  src="./images/img8.jpg"
-                  alt="Сервіс таксі"
-                  width="360"
-                  height="300"
-                />
+                <picture class="images">
+                  <source
+                    srcset="
+                      ./images/img8.jpg            1x,
+                      ./images/img(8)desktopx2.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img(8)tablet.jpg   1x,
+                      ./images/img(8)tabletx2.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                  ./images/img(8)mobile.jpg 1x,
+                  ./images/img (8)mobile2x.jpg 2x"
+                    media="max-width: 767px"
+                  />
+                  <img
+                    class="images"
+                    src="./images/img8.jpg"
+                    alt="Сервіс таксі"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="fourth-card-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -378,13 +630,35 @@
             </li>
             <li class="fourth-card">
               <div class="fourth-card-img">
-                <img
-                  class="images"
-                  src="./images/img9.jpg"
-                  alt="Ілюстрації фону"
-                  width="360"
-                  height="300"
-                />
+                <picture class="images">
+                  <source
+                    srcset="
+                      ./images/img9.jpg            1x,
+                      ./images/img(9)desktopx2.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img(9)tablet.jpg   1x,
+                      ./images/img(9)tabletx2.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                  ./images/img(9)mobile.jpg 1x,
+                  ./images/img (9)mobile2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="images"
+                    src="./images/img9.jpg"
+                    alt="Ілюстрації фону"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="fourth-card-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -398,13 +672,35 @@
             </li>
             <li class="fourth-card">
               <div class="fourth-card-img">
-                <img
-                  class="images"
-                  src="./images/img10.jpg"
-                  alt="Онлайн-курси"
-                  width="360"
-                  height="300"
-                />
+                <picture class="images">
+                  <source
+                    srcset="
+                      ./images/img10.jpg            1x,
+                      ./images/img(10)desktopx2.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img(10)tablet.jpg   1x,
+                      ./images/img(10)tabletx2.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                  ./images/img (10)mobile.jpg 1x,
+                  ./images/img (10)mobile2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="images"
+                    src="./images/img10.jpg"
+                    alt="Онлайн-курси"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="fourth-card-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -488,7 +784,7 @@
       </div>
     </footer>
 
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button class="close-btn-icon" type="button">
           <svg class="modal-svg" width="8" height="8">
@@ -565,8 +861,10 @@
                   <use href="./images/icons.svg#icon-btn-yes"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a href="" class="label-police-link">Privacy Policy</a>
+              <span class="label-police-span-text"
+                >I accept the terms and conditions of the
+                <a href="" class="label-police-link">Privacy Policy</a></span
+              >
             </label>
           </div>
           <button type="submit" class="form-btn">Send</button>
